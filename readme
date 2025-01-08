@@ -1,0 +1,120 @@
+# Todo List Application
+
+## Descrição do Projeto
+Este é um projeto simples de **Todo List** que implementa funcionalidades de CRUD (Criar, Ler, Atualizar, Deletar) para gerenciar tarefas. A aplicação utiliza:
+
+- **Frontend**: Vue.js com o framework Quasar
+- **Backend**: Node.js com o framework Express
+- **Banco de Dados**: PostgreSQL
+
+## Funcionalidades
+- Adicionar tarefas
+- Listar tarefas
+- Atualizar tarefas
+- Remover tarefas
+
+## Tecnologias Utilizadas
+
+### Frontend
+- [Vue.js](https://vuejs.org/)
+- [Quasar Framework](https://quasar.dev/)
+
+### Backend
+- [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [PostgreSQL](https://www.postgresql.org/)
+
+## Requisitos
+- **Node.js** (v16 ou superior)
+- **NPM** (v7 ou superior) ou **Yarn**
+- **PostgreSQL** (v13 ou superior)
+
+## Como Rodar o Projeto
+
+### Configurando o Backend
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/todo-app.git
+   cd todo-list/backend
+   ```
+
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+3. Configure as variáveis de ambiente:
+   - Crie um arquivo `.env` na pasta `backend` com o seguinte conteúdo:
+     ```env
+     DB_HOST=localhost
+     DB_PORT=5432
+     DB_USER=seu_usuario
+     DB_PASSWORD=sua_senha
+     DB_NAME=todo_list
+     PORT=3000
+     ```
+
+4. Crie o banco de dados:
+   ```sql
+   CREATE DATABASE todo_list;
+   ```
+
+5. Rode as migrações (se aplicável) para criar as tabelas:
+   ```bash
+   npm run migrate
+   ```
+
+6. Inicie o servidor:
+   ```bash
+   npm start
+   ```
+
+O servidor estará disponível em `http://localhost:3000`.
+
+### Configurando o Frontend
+1. Navegue para o diretório do frontend:
+   ```bash
+   cd ../frontend
+   ```
+
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   quasar dev
+   ```
+
+O frontend estará disponível em `http://localhost:9000/#/`.
+
+## Estrutura do Projeto
+```
+/
+├── backend
+│   ├── src
+│   │   ├── controllers
+│   │   ├── routes
+│   │   └── app.js
+│   ├── .env
+│   ├── package.json
+│   └── server.js
+├── frontend
+│   ├── src
+│   │   ├── components
+│   │   ├── pages
+│   │   └── App.vue
+│   ├── quasar.conf.js
+│   ├── package.json
+│   └── index.html
+└── README.md
+```
+
+## Próximos Passos
+- Implementar autenticação de usuários.
+- Adicionar paginação para tarefas.
+- Criar testes automatizados.
+
+## Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para abrir um _issue_ ou enviar um _pull request_.
